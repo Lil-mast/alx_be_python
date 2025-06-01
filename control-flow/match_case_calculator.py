@@ -1,6 +1,11 @@
 # Get user input for numbers
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+try:
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+except ValueError:
+    print("Error: Please enter valid numbers!")
+    exit(1)
+
 operation = input("Choose an operation (+, -, *, /): ")
 
 # Perform the calculation using match-case
@@ -22,3 +27,6 @@ match operation:
             print(f"Reuslt: {num1} / {num2} = {result}")
     case _:
         print("Invalid opearation! Please choose from +, -, *, or /.")
+        exit(1)
+
+print(f"Result: {num1} {operation} {num2} = {result}") # Conistent output format
