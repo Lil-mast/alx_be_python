@@ -1,13 +1,13 @@
-# Ask the user to inpujt a number
+# Prompt the user to enter a number
+while True:
+    try:
+        number = int(input("Enter a number to generate its multiplication table: "))
+        break  # Exit the loop if the input is valid
+    except ValueError:
+        print("Error: Please enter a valid integer!")
 
-try:
-    number = int(input("Enter a number to generate its multiplication table: "))
-except ValueError:
-    print("Error: Please enter a valid integer!")
-    exit(1)
-    
- # Generate the multiplication table
-print(f"Multiplication table for {number}:")
+# Generate and print the multiplication table
+print(f"\nMultiplication table for {number}:")
 for i in range(1, 11):
     product = number * i
     print(f"{number} x {i} = {product}")
