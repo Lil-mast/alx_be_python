@@ -1,7 +1,7 @@
 shopping_list = []
 
 def display_menu():
-    print("\nShopping List Manager")
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -22,11 +22,11 @@ def remove_item():
 
 def view_list():
     if shopping_list:
-        print("\nCurrent Shopping List:")
+        print("Current Shopping List:")
         for i, item in enumerate(shopping_list, 1):
             print(f"{i}. {item}")
-    else:
-        print("\nThe shopping list is empty.")
+   else:
+        print("The shopping list is empty.")
 
 def main():
     while True:
