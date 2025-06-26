@@ -22,11 +22,11 @@ def remove_item():
 
 def view_list():
     if shopping_list:
-        print("\nCurrent Shopping List:")
+        print("Current Shopping List:")
         for i, item in enumerate(shopping_list, 1):
             print(f"{i}. {item}")
-    else:
-        print("\nThe shopping list is empty.")
+   else:
+        print("The shopping list is empty.")
 
 def main():
     while True:

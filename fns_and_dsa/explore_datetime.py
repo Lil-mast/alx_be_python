@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 
+ HEAD
 def display_current_datetime():
     """Demonstrates current datetime handling with proper formatting"""
     current_date = datetime.now()
@@ -31,6 +32,15 @@ def main():
         calculate_future_date(days_input)
     except ValueError as e:
         print(f"Error: {e}. Please enter a valid integer.")
+=======
+def main():
+    current_time = datetime.now()
+    print("Current date and time:", current_time.strftime("%y-%m-%d %H:%M:%S"))
+
+    days_to_add = int(input("Enter number of days to add: "))
+    future_date = current_time + timedelta(days=days_to_add)
+    print("Future date:", future_date.strftime("%y-%m-%d"))
+ 11d137e0d570c4096e304ac8c1b2f61ec41fc81d
 
 if __name__ == "__main__":
     main()
