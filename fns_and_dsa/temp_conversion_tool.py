@@ -1,13 +1,12 @@
 # Global conversion factors
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
-ABSOLUTE_ZERO_C = -273.15  # For input validation
 
 def convert_to_celsius(fahrenheit: float) -> float:
     """Convert Fahrenheit to Celsius using global factor"""
     try:
         celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
-        if celsius < ABSOLUTE_ZERO_C:
+        if celsius < -273.15:  # Absolute zero check as literal value
             raise ValueError("Temperature below absolute zero")
         return celsius
     except TypeError:
@@ -16,7 +15,7 @@ def convert_to_celsius(fahrenheit: float) -> float:
 def convert_to_fahrenheit(celsius: float) -> float:
     """Convert Celsius to Fahrenheit using global factor"""
     try:
-        if celsius < ABSOLUTE_ZERO_C:
+        if celsius < -273.15:  # Absolute zero check as literal value
             raise ValueError("Temperature below absolute zero")
         return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     except TypeError:
