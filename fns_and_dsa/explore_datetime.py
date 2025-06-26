@@ -38,7 +38,7 @@ def main():
     current_time = datetime.now()
     print("Current date and time:", current_time.strftime("%y-%m-%d %H:%M:%S"))
 
-    days_to_add = int(input("Enter number of days to add: "))
+    days_to_add = int(input("Enter Enter the number of days to add to the current date: "))
     future_date = current_time + timedelta(days=days_to_add)
     print("Future date:", future_date.strftime("%y-%m-%d"))
 
