@@ -6,7 +6,7 @@ def main():
     if len(sys.argv) != 3:
         print("Usage: python main.py <numerator> <denominator>")
         print("Example: python main.py 10 2")
-        return
+        sys.exit(1)
     
     # Get numerator and denominator from command line
     numerator = sys.argv[1]
