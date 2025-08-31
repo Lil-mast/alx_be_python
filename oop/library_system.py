@@ -70,17 +70,10 @@ class Library:
         """
         if isinstance(book, Book):
             self.books.append(book)
-            print(f"Added: {book}")
         else:
             print(f"Error: {book} is not a valid Book instance")
     
     def list_books(self):
         """List all books in the library with their details."""
-        if not self.books:
-            print("The library is empty.")
-            return
-        
-        print("\n=== Library Collection ===")
-        for i, book in enumerate(self.books, 1):
-            print(f"{i}. {book}")
-        print("==========================\n")
+        for book in self.books:
+            print(book)
