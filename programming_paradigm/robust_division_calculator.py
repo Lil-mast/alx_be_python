@@ -20,7 +20,7 @@ def safe_divide(numerator, denominator):
         return result
         
     except ValueError:
-        return "Error: Both numerator and denominator must be numeric values"
+        return "Error: Both numerator and denominator must be numeric values."
         
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
