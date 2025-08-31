@@ -7,8 +7,7 @@ def safe_divide(numerator, denominator):
         denominator: The denominator (will be converted to float)
     
     Returns:
-        float: The division result if successful
-        str: Error message if division fails
+        str: Formatted division result or error message
     """
     try:
         # Convert inputs to floats
@@ -17,7 +16,9 @@ def safe_divide(numerator, denominator):
         
         # Perform division
         result = num / den
-        return result
+        
+        # Format the successful result as specified
+        return f"The result of the division is {result}"
         
     except ValueError:
         return "Error: Please enter numeric values only."
